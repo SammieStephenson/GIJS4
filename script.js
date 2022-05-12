@@ -4,11 +4,13 @@
 // Input: [10, 5]  Output: 7.5
 // Input: [1.5, 3, 2.5, 1]  Output: 2
 
-
-function arrayHolder() {
-    const arrayOne = [1, 4, 7]
-
+const first = [1, 4, 7]
+function arrayHolder(array) {
+    let total = array.reduce((a, b) => a + b, 0);
+    return total / array.length;
 }
+
+console.log(arrayHolder(first));
 
 // MEDIUM: Suppose an array sorted in ascending order is rotated at some pivot unknown to you 
 // beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
@@ -23,6 +25,16 @@ function arrayHolder() {
 // Input: nums = [4,5,6,7,0,1,2], target = 3
 // Output: -1.
 
+const nums = [4, 5, 6, 7, 0, 1, 2, 3];
+const target = nums.indexOf(0);
+
+console.log(target);
+
+const nums2 = [4, 5, 6, 7, 0, 1, 2];
+const target2 = nums2.indexOf(3);
+
+console.log(target2);
+
 
 
 // HARD: Create two buttons, one that when clicked turns the background of the body red. The 
@@ -35,6 +47,16 @@ function arrayHolder() {
 // located in a folder named hard_js. 
 
 
+const red = document.getElementById("red");
+red.addEventListener('click', function onClick(event) {
+    document.body.style.backgroundColor = 'red';
+});
+
+const white = document.getElementById("white");
+white.addEventListener('click', function onClick(event) {
+    document.body.style.backgroundColor = 'white';
+});
+
 
 // *VERY HARD: You are given coins of different denominations and a total amount of money amount. 
 // Write a function to compute the fewest number of coins that you need to make up that amount. If that 
@@ -46,5 +68,6 @@ function arrayHolder() {
 // Output: 3 
 // Explanation: 11 = 5 + 5 + 1
 // Example 2:
-// Input: coins = [2], amount = 3
-// Output: -1
+// Input: coins = [2], amount = 
+
+// 
